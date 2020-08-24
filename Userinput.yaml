@@ -1,0 +1,16 @@
+---
+token: zqOgHcFoV68eO76sa0fljIdB3gBZEV03cWWq8Fct4vc0kqRCtknka9JVuHeHspWfgT66lBARgdFtT3ueVSNySoW5vPi11Ffa
+org: 61256a33-a85e-42da-932d-77082216253c
+sites:
+  PA-Demo:
+    switches:
+      HO-2300-test:
+        interfaces:
+          lo0.0: 111.111.111.111/32
+          irb.299: 10.20.4.1/24
+          irb.500: 10.20.40.1/22
+          irb.510: 10.20.104.1/22
+          irb.3510: 10.20.1.5/31
+    tacacs_servers: 
+      - 10.0.117.12
+      - 172.19.112.12
