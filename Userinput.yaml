@@ -1,16 +1,17 @@
 ---
-token: <<INSERT TOKEN>>
-org: <<INSERT ORG>>
+token: <<insert-token. Nice try Mark! ;-)>>
+org: <<insert-org>>
 sites:
   PA-Demo:
     switches:
-      HO-2300-test:
+      USPA-1North-SWACC1:
         interfaces:
-          lo0.0: 111.111.111.111/32
-          irb.299: 10.20.40.1/24
-          irb.500: 10.20.50.1/24
-          irb.510: 10.20.60.1/24
+          lo0.0: 10.20.0.1/32
+          irb.299: 10.20.41.1/24
+          irb.500: 10.20.51.1/24
+          irb.510: 10.20.61.1/24
           irb.3510: 10.20.1.5/31
+          irb.3511: 10.20.1.7/31
     tacacs_servers: 
       - 10.0.117.12
       - 172.168.10.10
