@@ -22,7 +22,7 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 
 
 ## Final Result
-The switch-specific OSPF configuration should be pushed down to the switch. Two OSPF peerings should come up on the switch, one for each Distribution-Switch.
+The switch-specific OSPF configuration should be pushed down to the switch. Two OSPF peerings should come up on the switch, one for each Distribution-Switch. All the local RFC1918 routes should get advertised upstream via OSPF.
 
 
 ## Verification
