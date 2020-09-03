@@ -8,9 +8,12 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 ## Requirements
 1. Install python
 2. Pip install requests jinja2 pyyaml
+3. Please setup the topology as mentioned in "Demo-Topology.pdf"
+4. Interface ranges need to be defined as per your topology in the Mist switch-config template 
 
 
 ## Usage
+0. Claim/Adopt EX switch on Mist cloud
 1. git clone https://github.com/ankitchadha/Mist-Switch-Specific-Config.git
 2. cd Mist-Switch-Specific-Config/
 3. Provide switch-specific parameters in "Userinput.yaml" file
