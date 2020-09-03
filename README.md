@@ -26,9 +26,11 @@ The switch-specific OSPF configuration should be pushed down to the switch. Two 
 
 
 ## Verification
+```
 root@EX2300-Demo-Switch> show ospf neighbor
 Address          Interface              State     ID               Pri  Dead
 10.20.1.4        irb.3510               Full      88.88.88.88      128    34
 10.20.1.6        irb.3511               Full      88.88.88.88      128    32
 
 {master:0}
+```
