@@ -4,7 +4,7 @@ org: <<insert-org>>
 sites:
   PA-Demo:
     switches:
-      USPA-1North-SWACC1:
+      EX2300-Demo-Switch:
         interfaces:
           lo0.0: 10.20.0.1/32
           irb.299: 10.20.41.1/24
