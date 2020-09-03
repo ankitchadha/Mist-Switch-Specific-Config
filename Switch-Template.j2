@@ -5,7 +5,9 @@
         {%- for tacacs in siteinfo.tacacs_servers %}
 set system tacplus-server {{ tacacs }} source-address {{intip}}
             {%- endfor %}
-          {%- endif %}
+      {%- elif "irb" in intname %}
+set vlans {{"v" + intname[4:]}} l3-interface {{intname}}
+      {%- endif %}
 set interfaces {{intname}} family inet address {{intip}}
     {%- endfor %}  
   {%- endfor %}
