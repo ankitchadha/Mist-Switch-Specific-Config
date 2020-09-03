@@ -35,14 +35,15 @@ def updateAPI(filepath, baseurl, cmdlist):
             usersites = userinput["sites"]
             if usersites.get(site["name"]) != None:
                 sitename = site["name"]
-                pprint("Site %s needs change" % sitename)
+                pprint("Site %s needs change" % str(sitename))
                 switchurl = baseurl + "/api/v1/sites/" + site["id"] + "/devices?type=switch"
                 swobjs = requests.get(switchurl, headers=header).json()
                 for switch in swobjs:
                     if usersites[sitename]["switches"].get(switch["name"]) != None:
-                        pprint("Switch %s needs change" % switch["name"])
+                        pprint("Switch %s needs change" % str(switch["name"]))
                         puturl = baseurl + "/api/v1/sites/" + site["id"] + "/devices/" + switch["id"]
-                        cmdlist.extend(switch["additional_config_cmds"])
+                        if "additional_config_cmds" in switch:
+                            cmdlist.extend(switch["additional_config_cmds"])
                         pushlist = ["\"" + item for item in cmdlist]
                         if(pushlist[len(pushlist)-1] == "\""):
                             pushlist.pop()
@@ -59,7 +60,7 @@ if __name__ == "__main__":
     cmdlist = getcmdlist(template, userinfo)
     updateAPI(userinfo, baseurl, cmdlist)
 
-# Improvements:
+# Future improvements:
 # 1. Save jinja2 output to a file. This will help as Mist UI doesn't keep track of Junos config and the additional commands can be easily lost
 # 2. This program appends the net-new commands to existing switch specific commands (no overwrite). The program does NOT look for duplicate commands. 
 # 3. Use this program to set up switch-specific configs that do not need to be changed later (like loopback IP)
