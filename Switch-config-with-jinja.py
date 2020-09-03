@@ -62,5 +62,3 @@ if __name__ == "__main__":
 
 # Future improvements:
 # 1. Save jinja2 output to a file. This will help as Mist UI doesn't keep track of Junos config and the additional commands can be easily lost
-# 2. This program appends the net-new commands to existing switch specific commands (no overwrite). The program does NOT look for duplicate commands. 
-# 3. Use this program to set up switch-specific configs that do not need to be changed later (like loopback IP)
