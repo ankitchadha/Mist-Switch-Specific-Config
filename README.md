@@ -12,6 +12,13 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 4. Interface ranges need to be defined as per your topology in the Mist switch-config template 
 
 
+## Workflow:
+1. User inputs details in the "Userinput.yaml" file
+2. Jinja2 template reads the yaml file and prepares Junos config
+3. Python uses this config and makes an API call to Mist Cloud
+4. Mist Cloud stores the config, and pushes it down to the Juniper switch
+
+
 ## Usage
 0. Claim/Adopt EX switch on Mist cloud
 1. git clone https://github.com/ankitchadha/Mist-Switch-Specific-Config.git
