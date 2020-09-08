@@ -23,11 +23,11 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 0. Claim/Adopt EX switch on Mist cloud
 1. git clone https://github.com/ankitchadha/Mist-Switch-Specific-Config.git
 2. cd Mist-Switch-Specific-Config/
-3. Provide switch-specific parameters in "Userinput.yaml" file
-3.1. Insert your token
-3.2. Input Mist org-ID
-3.3. Insert the switch-name for which custom-config needs to be pushed
-3.4. Insert IP address for the loopback, and various IRBs that need to be advertized with OSPF
+3. Provide switch-specific parameters in "Userinput.yaml" file  
+3.1. Insert your token  
+3.2. Input Mist org-ID  
+3.3. Insert the switch-name for which custom-config needs to be pushed  
+3.4. Insert IP address for the loopback, and various IRBs that need to be advertized with OSPF  
 4. python Switch-config-with-jinja.py
 
 
