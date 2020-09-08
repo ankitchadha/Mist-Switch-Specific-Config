@@ -26,6 +26,7 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 3. Provide switch-specific parameters in "Userinput.yaml" file  
 3.1. Insert your token  
 3.2. Input Mist org-ID  
+3.3. Input Mist Site-ID where the switch was added  
 3.3. Insert the switch-name for which custom-config needs to be pushed  
 3.4. Insert IP address for the loopback, and various IRBs that need to be advertized with OSPF  
 4. python Switch-config-with-jinja.py
