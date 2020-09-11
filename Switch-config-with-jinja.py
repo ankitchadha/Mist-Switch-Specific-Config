@@ -62,3 +62,4 @@ if __name__ == "__main__":
 
 # Future improvements:
 # 1. Save jinja2 output to a file. This will help as Mist UI doesn't keep track of Junos config and the additional commands can be easily lost
+# 2. Make changes to jinja2 output for pushing config to multiple switches in one-go. This will include using a custom string in the dictionary
