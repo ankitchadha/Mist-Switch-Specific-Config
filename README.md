@@ -17,7 +17,8 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 2. Jinja2 template reads the yaml file and prepares Junos config
 3. Python uses this config and makes an API call to Mist Cloud
 4. Mist Cloud stores the config, and pushes it down to the Juniper switch
-
+5. Script is idempotent
+6. Script is additive, exisitng switch-specific-commands are not overwritten
 
 ## Usage
 0. Claim/Adopt EX switch on Mist cloud
@@ -26,7 +27,7 @@ Push switch specific config to switches that are adopted/claimed in Mist Cloud. 
 3. Provide switch-specific parameters in "Userinput.yaml" file  
 3.1. Insert your token  
 3.2. Input Mist org-ID  
-3.3. Input Mist Site-ID where the switch was added  
+3.3. Input Mist Site-name where the switch was added  
 3.3. Insert the switch-name for which custom-config needs to be pushed  
 3.4. Insert IP address for the loopback, and various IRBs that need to be advertized with OSPF  
 4. python Switch-config-with-jinja.py
