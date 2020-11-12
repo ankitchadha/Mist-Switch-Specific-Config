@@ -1,17 +1,73 @@
 ---
-token: <<insert-token. Nice try Mark! ;-)>>
-org: <<insert-org>>
+token: <<Enter API token>>
+org: <<Enter org id>>
 sites:
   PA-Demo:
     switches:
-      EX2300-Demo-Switch:
+      HO-1:
         interfaces:
-          lo0.0: 10.20.0.1/32
+          lo0.0: 10.10.1.1/32
+          irb.299: 10.10.41.1/24
+          irb.500: 10.10.51.1/24
+          irb.510: 10.10.61.1/24
+          irb.3510: 10.10.1.5/31
+          irb.3511: 10.10.1.7/31
+      JCL-Test-1:
+        interfaces:
+          lo0.0: 10.10.1.2/32
+          irb.299: 10.10.41.2/24
+          irb.500: 10.10.51.2/24
+          irb.510: 10.10.61.2/24
+          irb.3520: 10.10.2.5/31
+          irb.3521: 10.10.2.7/31
+    tacacs_servers: 
+      - 10.10.10.12
+      - 172.168.10.10
+    snmp:
+      community: S0larW!nd$
+  SEA-Demo:
+    switches:
+      SHO-1:
+        interfaces:
+          lo0.0: 10.20.1.1/32
           irb.299: 10.20.41.1/24
           irb.500: 10.20.51.1/24
           irb.510: 10.20.61.1/24
           irb.3510: 10.20.1.5/31
           irb.3511: 10.20.1.7/31
+      SHO-2:
+        interfaces:
+          lo0.0: 10.20.2.2/32
+          irb.299: 10.20.41.2/24
+          irb.500: 10.20.51.2/24
+          irb.510: 10.20.61.2/24
+          irb.3520: 10.20.2.5/31
+          irb.3521: 10.20.2.7/31
     tacacs_servers: 
-      - 10.0.117.12
+      - 10.10.10.12
       - 172.168.10.10
+    snmp:
+      community: S0larW!nd$
+  Frankfurt-Demo:
+    switches:
+      SHO-1:
+        interfaces:
+          lo0.0: 10.30.1.1/32
+          irb.299: 10.30.41.1/24
+          irb.500: 10.30.51.1/24
+          irb.510: 10.30.61.1/24
+          irb.3510: 10.30.1.5/31
+          irb.3511: 10.30.1.7/31
+      SHO-2:
+        interfaces:
+          lo0.0: 10.30.1.2/32
+          irb.299: 10.30.41.2/24
+          irb.500: 10.30.51.2/24
+          irb.510: 10.30.61.2/24
+          irb.3520: 10.30.2.5/31
+          irb.3521: 10.30.2.7/31
+    tacacs_servers: 
+      - 10.30.117.12
+      - 172.168.30.10
+    snmp:
+      community: S0larW!nd$

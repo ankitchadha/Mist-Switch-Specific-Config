@@ -1,15 +1,12 @@
-{%- for sitename, siteinfo in sites.items() %}
-  {%- for switchname, switchinfo in siteinfo.switches.items() %}
-    {%- for intname, intip in switchinfo.interfaces.items() -%}
-      {%- if intname == "lo0.0" %}
+{%- for intname, intip in interfaces.items() %}
+  {%- if intname == "lo0.0" %}
 set routing-options router-id {{intip[:-3]}}
-        {%- for tacacs in siteinfo.tacacs_servers %}
-set system tacplus-server {{ tacacs }} source-address {{intip}}
-            {%- endfor %}
-      {%- elif "irb" in intname %}
+  {%- elif "irb" in intname %}
 set vlans {{"v" + intname[4:]}} l3-interface {{intname}}
-      {%- endif %}
+  {%- endif %}
 set interfaces {{intname}} family inet address {{intip}}
-    {%- endfor %}  
-  {%- endfor %}
 {%- endfor %}
+{%- for ts in tacacs_servers %}
+set tacacs-server {{ ts }} source-address {{ loopback }}
+{%- endfor %}
+set snmp community {{ snmp_community }}
