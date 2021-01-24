@@ -7,6 +7,6 @@ set vlans {{"v" + intname[4:]}} l3-interface {{intname}}
 set interfaces {{intname}} family inet address {{intip}}
 {%- endfor %}
 {%- for ts in tacacs_servers %}
-set tacacs-server {{ ts }} source-address {{ loopback }}
+set system tacplus-server {{ ts }} source-address {{ loopback }}
 {%- endfor %}
 set snmp community {{ snmp_community }}
